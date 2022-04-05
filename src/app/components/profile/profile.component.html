@@ -1,0 +1,18 @@
+<div class="profile">
+    <mat-card class="profile-card">
+        <div class="card-body">
+            <mat-card-title class="title">User Profile</mat-card-title>
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{profile?.name}}</mat-card-title>
+                <mat-card-subtitle>{{profile?.email}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    {{profile?.bio}}
+                </p>
+            </mat-card-content>
+        </div>
+        <mat-progress-bar *ngIf="isLoading" mode="query"></mat-progress-bar>
+    </mat-card>
+</div>

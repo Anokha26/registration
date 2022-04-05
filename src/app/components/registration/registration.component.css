@@ -1,0 +1,23 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  justify-content: center;
+}
+.registration-card {
+  width: 450px;
+  padding: 0;
+}
+.card-body {
+  padding: 15px 20px;
+}
+.mat-form-field {
+  width: 100%;
+}
+.submit-btn {
+  margin-left: 10px !important;
+}
+.title {
+  padding-bottom: 15px;
+}

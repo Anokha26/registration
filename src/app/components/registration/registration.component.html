@@ -1,0 +1,33 @@
+<div class="registration">
+    <mat-card class="registration-card">
+        <div class="card-body">
+            <mat-card-title class="title">Registration Form</mat-card-title>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your name</mat-label>
+                    <input matInput placeholder="User Name" name="name" type="text" formControlName="name">
+                    <mat-error class="error-msg" *ngIf="name?.invalid">{{getErrorMessage('name')}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" name="email" type="email" formControlName="email">
+                    <mat-error *ngIf="email?.invalid">{{getErrorMessage('email')}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput placeholder="password" name="password" type="password" formControlName="password">
+                    <mat-error *ngIf="password?.invalid">{{getErrorMessage('password')}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter Bio</mat-label>
+                    <textarea matInput placeholder="Enter your bio" name="bio" type="bio"
+                        formControlName="bio"></textarea>
+                </mat-form-field>
+                <mat-card-actions>
+                    <button class="submit-btn" mat-raised-button color="primary">Submit</button>
+                </mat-card-actions>
+            </form>
+        </div>
+        <mat-progress-bar *ngIf="isLoading" mode="query"></mat-progress-bar>
+    </mat-card>
+</div>
